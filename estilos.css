@@ -10,12 +10,13 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #333;
     font-size: 25px;
+
 }
 
 .menu-principal li {
@@ -36,6 +37,46 @@ body {
 
 .active {
     background-color: #2E5266;
+}
+
+
+/* DROPDOWN */
+
+.menu-principal .seccion-principal {
+    position: relative;
+}
+
+.menu-principal .seccion-principal ul {
+    background-color: #fff;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .3);
+}
+
+.menu-principal .seccion-principal ul li {
+    display: none;
+    float: none;
+}
+
+.menu-principal .seccion-principal ul li a {
+    color: #000;
+    padding: 15px 20px;
+    font-size: 20px;
+    min-width: 120px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.menu-principal .seccion-principal:hover ul li {
+    display: block;
+}
+
+.menu-principal .seccion-principal ul li a:hover {
+    color: #000;
+    background-color: rgba(159, 177, 188,0.4);
+
 }
 
 /* SECTION */
@@ -71,21 +112,25 @@ section {
 .uno {
     width: 500px;
     height: 600px;
+    border: 1px solid #6e8898;
 }
 
 .dos {
     width: 700px;
     height: 500px;
+    border: 1px solid #9fb1bc;
 }
 
 .tres {
     width: 900px;
     height: 600px;
+    border: 1px solid #e2c044;
 }
 
 .cuatro {
     width: 150px;
     height: 500px;
+    border: 1px solid #d3d0cb;
 }
 
 /* FOOTER */
@@ -132,4 +177,19 @@ footer {
     margin: 0;
     padding: 0 20px;
     line-height: 40px;
+}
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 650px) {
+    section {
+        margin-top: 250px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    section {
+        margin-top: 325px;
+    }
 }
